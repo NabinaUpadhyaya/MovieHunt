@@ -114,7 +114,7 @@ if (isset($_POST['SignIn'])){
 	<footer>
 		<p>
 			<a>MovieHunt</a>
-			- Created by Nabina Upadhyaya and Ahwan Poudyal:
+			- Created by Nabina Upadhyaya and Ahwan Poudyal
 			<a target="_blank" href="slide.php">Learn more...</a>
 		</p>
 	</footer>
