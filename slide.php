@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,36 +19,36 @@ if (isset($_POST['SignUp'])){
   $email1=$_POST['email1'];
   $password1=$_POST['password1'];
   $confirmpassword=$_POST['confirm_password'];
-  $passwordHash = password_hash($password1, PASSWORD_DEFAULT);
-
+  
   if(!empty($username1)&&!empty($email1)&&!empty($password1)){
-	
 	$sql="SELECT * FROM users WHERE email='$email1'";
 	$result=mysqli_query($conn,$sql);
 	if(mysqli_num_rows($result)>0){
 		echo'<script>alert("Email Exists!!!")</script>';
-	}
-	if($password1!=$confirmpassword){
-		echo'<script>alert("Passwords dont match!!!")</script>';
-	}
-	if(strlen($password1)<8){
-		echo'<script>alert("Passwords must be atleast 8 characters long")</script>';
-	}
 	
-	else{
-		$sql = " INSERT INTO users(username,email,password)
-		VALUES ('$username1','$email1','$passwordHash')
-		";
-	  $result1 = mysqli_query($conn,$sql);
-	  if(!$result1){
-		echo "data insertion problem";
-
 	}
-  }
- 
- 
+	else{
+		if($password1!=$confirmpassword){
+			echo'<script>alert("Passwords dont match!!!")</script>';
+		}
+		if(strlen($password1)<8){
+			echo'<script>alert("Passwords must be atleast 8 characters long")</script>';
+		}
+	
+		else{
+			$sql = " INSERT INTO users(username,email,password)
+			VALUES ('$username1','$email1','$password1')
+			";
+	  		$result1 = mysqli_query($conn,$sql);
+	  		if(!$result1){
+				echo "data insertion problem";
+
+			}	
+		}
+	}
   }
 }
+ 
 if (isset($_POST['SignIn'])){
 
   $email2=$_POST['email2'];
@@ -56,16 +57,13 @@ if (isset($_POST['SignIn'])){
   $sql= "SELECT * FROM users where email='$email2' AND password='$password2'";
   $result2= mysqli_query($conn,$sql);
   $num=mysqli_num_rows($result2);
-
-  if($num==1){
+ if($num>0){
     session_start();
     $_SESSION['login']=true;
-    header('location:\NEW MOVIE\index.html');
-  
-  }
-  else{
-	echo'<script>alert("Invalid credentials")</script>';
-  }
+    header('location:/TEST-1/index.php');
+   }
+   
+	
 }
 ?>
 
@@ -116,8 +114,8 @@ if (isset($_POST['SignIn'])){
 	<footer>
 		<p>
 			<a>MovieHunt</a>
-			- Created by Nabina Upadhyaya and Ahwan Poudyal
-			<a target="_blank" href="about.html">Learn more...</a>
+			- Created by Nabina Upadhyaya and Ahwan Poudyal:
+			<a target="_blank" href="slide.php">Learn more...</a>
 		</p>
 	</footer>
 	<script src="slide.js"></script>
