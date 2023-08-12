@@ -1,0 +1,282 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+        <link rel="icon" href="img/glassicon.png" type="glassicon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>Moviehunt</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo">MovieHunt</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                        <button onclick="document.getElementById('scrollHome')?.scrollIntoView({block:'start',behavior:'smooth'})">
+                            <li class="menu-list-item ">Home</li>
+                    </button>
+                        <button onclick="document.getElementById('scrollMovie')?.scrollIntoView({block:'center',behavior:'smooth'})">
+                            <li class="menu-list-item">Movies</li>
+                        </button>
+                        <button onclick="document.getElementById('scrollSeries')?.scrollIntoView({block:'center',behavior:'smooth'})">
+                            <li class="menu-list-item">Series</li>
+                            </button>
+                        <button onclick="document.getElementById('scrollAnime')?.scrollIntoView({block:'center',behavior:'smooth'})">
+                            <li class="menu-list-item">Anime</li>
+                    </button>
+                        <button onclick="document.getElementById('scrollTrend')?.scrollIntoView({block:'center',behavior:'smooth'})">
+                            <li class="menu-list-item">Trends</li>
+                </button>
+
+                </ul>
+            </div>
+            <div class="profile-container">
+                <img class="profile-picture" src="img/profile.webp" alt="">
+                <div class="profile-text-container">
+                    <span class="profile-text">Profile</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <button>  <i class="left-menu-icon fas fa-search"></i></button>
+       <a href="index.html"> <button> <i class="left-menu-icon fas fa-home"></i></button></a>
+      <a href="about.html"> <button> <i class="left-menu-icon fas fa-address-card"></i></button></a>
+    <a href="slide.php" onclick=" return confirm('Are You sure you want to logout?');"><button><i class="left-menu-icon fas fa-sign-out-alt"></i> </button></a>
+      
+    </div>
+    <div class="container" id="scrollHome">
+        <div class="content-container">
+            <div class="featured-content"
+                style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/tlkback.jpg'); background-size:cover">
+                <img class="featured-title" src="img/tlkfront.jpg" alt="talktome">
+                <p class="featured-desc"></p>
+                <a href="https://youtu.be/aLAKJu9aJys" ><button class="featured-button">WATCH TRAILER</button></a>
+            </div>
+            <div class="movie-list-container" id="scrollTrend">
+                <h1 class="movie-list-title">NEW RELEASES</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/oppenheimerdown.png" alt="Oppenheimer">
+                            <span class="movie-list-item-title">Oppenheimer</span>
+                            <p class="movie-list-item-desc">"The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb.".</p>
+                            <a href="https://youtu.be/uYPbbksJxIg"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/barbie.webp" alt="Barbie">
+                            <span class="movie-list-item-title">Barbie</span>
+                            <p class="movie-list-item-desc">Watch the adventures of barbie and ken in human world.</p>
+                           <a href="https://youtu.be/pBk4NYhWNMM" ><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/missionimp.jpg" alt="Mission impossible 7">
+                            <span class="movie-list-item-title">MI-7</span>
+                            <p class="movie-list-item-desc">Ethan hunt and IMF team must find a deadly weapon before it falls into bad hands.</p>
+                           <a href="https://youtu.be/avz06PDqDbM" ><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/insidious.jpg" alt="">
+                            <span class="movie-list-item-title">Insidious 5</span>
+                            <p class="movie-list-item-desc">Josh Lambert heads east to drop his son,College becomes a nightmare when the repressed demons of his past suddenly return to haunt them.</p>
+                          <a href="https://youtu.be/ZuQuOnYnr3Q">  <button class="movie-list-item-button">Watch</button> </a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/popes.jpg" alt="Popes Exorcist">
+                            <span class="movie-list-item-title">Popes Exorcist</span>
+                            <p class="movie-list-item-desc">A detailed portrait of a priest who performed more than 100,000 exorcisms in his lifetime.</p>
+                            <a href="https://youtu.be/YJXqvnT_rsk"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/extraction.jpg" alt="extraction">
+                            <span class="movie-list-item-title">Extraction 2</span>
+                            <p class="movie-list-item-desc">Commando Tyler Rake embarks on a dangerous mission to save a ruthless gangster's imprisoned family.</p>
+                          <a href="https://youtu.be/Y274jZs5s7s" > <button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/covenant.jpg" alt="The covenant">
+                            <span class="movie-list-item-title">The Covenant</span>
+                            <p class="movie-list-item-desc">During the war in Afghanistan,a local interpreter risks his life to carry an injured sergeant across the harsh terrains.</p>
+                         <a href="https://youtu.be/02PPMPArNEQ">   <button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="movie-list-container" id="scrollMovie">
+                <h1 class="movie-list-title">TOP MOVIES</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/John_Wick.jpg" alt="John wick">
+                            <span class="movie-list-item-title">John Wick 4</span>
+                            <p class="movie-list-item-desc">With the price on his head ever increasing, legendary hit man John Wick takes his fight against the High Table.</p>
+                            <a href="https://youtu.be/qEVUtrk8_B4"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/godfather.jpg" alt="The Godfather">
+                            <span class="movie-list-item-title">The Godfather</span>
+                            <p class="movie-list-item-desc">Don Vito Corleone, head of a mafia family, decides to hand over his empire to his youngest son Michael..</p>
+                         <a href="https://youtu.be/rqGJyUB1Q3s" >  <button class="movie-list-item-button">Watch</button> </a>
+                        </div>
+                        <div class="movie-list-item">
+                        <img class="movie-list-item-img" src="img/inception.jpg" alt="Inception">
+                            <span class="movie-list-item-title">Inception</span><br>
+                            <p class="movie-list-item-desc">The film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating the subconscious of his targets.<br></p>
+                        <a href="https://youtu.be/YoHD9XEInc0"> <button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/1917.jpg" alt="1917">
+                            <span class="movie-list-item-title">1917</span>
+                            <p class="movie-list-item-desc">1917 follows two fictional British lance corporals tasked with stopping a battalion of some 1,600 men.</p>
+                        <a href=""  ><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/titanic.jpg" alt="Titanic">
+                            <span class="movie-list-item-title">Titanic</span>
+                            <p class="movie-list-item-desc">Seventeen-year-old Rose hails from an aristocratic family  meets Jack Dawson, an artist, and falls in love with him.</p>
+                        <a href="https://youtu.be/kVrqfYjkTdQ"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/interstellar.jpg" alt="Interstellar">
+                            <span class="movie-list-item-title">Interstellar</span>
+                            <p class="movie-list-item-desc">Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.</p>
+                         <a href="https://youtu.be/zSWdZVtXT7E"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/polar.jpg" alt="Polar">
+                            <span class="movie-list-item-title">Polar</span>
+                            <p class="movie-list-item-desc">The world's top assassin, Duncan Vizla,is settling into retirement when his former employer marks him as a liability to the firm.</p>
+                        <a href="https://youtu.be/oMHwRal-AR8"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="featured-content"
+                style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/blacklistbck.jpg'); background-size: cover;"">
+                <img class="featured-title" src="img/the blacklist.jpg" alt="blacklist"><br><br>
+                
+                <button class="featured-button">WATCH TRAILER</button>
+            </div>
+            <div class="movie-list-container" id="scrollSeries">
+                <h1 class="movie-list-title">TOP SERIES</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/freinds.jpg" alt="Freinds">
+                            <span class="movie-list-item-title">Friends</span>
+                            <p class="movie-list-item-desc">Lives of six reckless adults living in Manhattan, as they indulge in adventures which make their lives both troublesome and happening.</p>
+                         <a href="https://youtu.be/IEEbUzffzrk"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/viki.jpg" alt="Vikings">
+                            <span class="movie-list-item-title">Vikings</span>
+                            <p class="movie-list-item-desc">Vikings transports us to the brutal and mysterious world of Ragnar Lothbrok,a Viking warrior and farmer who yearns to explore and raidthe distant shores.</p>
+                        <a href="https://youtu.be/9GgxinPwAGc"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/peaky.jpg" alt="PeakyBlinders">
+                            <span class="movie-list-item-title">PeakyBlinders</span>
+                            <p class="movie-list-item-desc">A gangster family epic set in 1900s England,centering on a gang who sew razor blades in caps,and their fierce boss Tommy Shelby.</p>
+                        <a href="https://youtu.be/oVzVdvGIC7U"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/bb.jpg" alt="BreakingBad">
+                            <span class="movie-list-item-title">Breaking Bad</span>
+                            <p class="movie-list-item-desc">Walter White,a chemistry teacher,discovers that he has cancer and decides to get into the meth-making business to repay his debts.</p>
+                        <a href="https://youtu.be/HhesaQXLuRY"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/got.jpg" alt="Game of thrones">
+                            <span class="movie-list-item-title">GOT</span>
+                            <p class="movie-list-item-desc">Nine noble families wage war against each other in order to gain control over the mythical land of Westeros.</p>
+                         <a href="https://youtu.be/bjqEWgDVPe0"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/mrrobot.jpg" alt="">
+                            <span class="movie-list-item-title">Mr. Robot</span>
+                            <p class="movie-list-item-desc">Elliot, a cyber-security engineer suffering from anxiety, works for a corporation and hacks felons by night.</p>
+                         <a href="https://youtu.be/xIBiJ_SzJTA"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/house.jpg" alt="House">
+                            <span class="movie-list-item-title">House</span>
+                            <p class="movie-list-item-desc">Dr House, a medical genius, and his team get together to solve puzzling cases of patients with bizarre illnesses.</p>
+                        <a href="https://youtu.be/MczMB8nU1sY"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="movie-list-container" id="scrollAnime">
+                <h1 class="movie-list-title">TOP ANIME</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/one piece.jpg" alt="One Piece">
+                            <span class="movie-list-item-title">OnePiece</span>
+                            <p class="movie-list-item-desc">Monkey D.Luffy wants to become the King of all pirates. Along his quest he meets his crew and his journey begins.</p>
+                         <a href="https://aniwatch.to/one-piece-100"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/naruto.jpg" alt="Naruto">
+                            <span class="movie-list-item-title">Naruto</span>
+                            <p class="movie-list-item-desc">Naruto Uzumaki,a mischievous adolescent ninja,struggles as he searches for recognition and dreams of becoming the Hokage</p>
+                        <a href="https://aniwatch.to/naruto-677?ref=search"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/demon.jpg" alt="DemonSlayer">
+                            <span class="movie-list-item-title">DemonSlayer</span>
+                            <p class="movie-list-item-desc"> Tanjiro sets out to become a demon slayer to avenge his family and cure his sister.</p>
+                         <a href="https://aniwatch.to/demon-slayer-kimetsu-no-yaiba-47"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/bleach.png" alt="Bleach">
+                            <span class="movie-list-item-title">Bleach</span>
+                            <p class="movie-list-item-desc">Ichigo Kurosaki is an ordinary high schooler—until his family is attacked by a Hollow,a corrupt spirit that seeks to devour human souls.</p>
+                         <a href="https://aniwatch.to/bleach-806"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/db.jpg" alt="Dragon Ball">
+                            <span class="movie-list-item-title">Dragon Ball</span>
+                            <p class="movie-list-item-desc">SONGoku is a young boy who lives in the woods all alone,until a girl named Bulma runs into him in her search for magical objects called"Dragon Balls."</p>
+                        <a href="https://aniwatch.to/dragon-ball-509?ref=search"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/aot.webp" alt="Attack on titan">
+                            <span class="movie-list-item-title">AOT</span>
+                            <p class="movie-list-item-desc">Eren along with his adopted sister Mikasa and his childhood friend Armin,as they join the war against the titans and to discover a way of defeating them.<p>
+                          <a href="https://aniwatch.to/attack-on-titan-112?ref=search"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/pokemon.webp" alt="Pokemon">
+                            <span class="movie-list-item-title">Pokémon</span>
+                            <p class="movie-list-item-desc">Young Satoshi has not only dreamed of becoming a "Pokemon Master",and on  his 10th birthday,he finally has a chance to make that dream a reality.</p><br>
+                         <a href="https://aniwatch.to/pokemon-2097?ref=search"></a><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
